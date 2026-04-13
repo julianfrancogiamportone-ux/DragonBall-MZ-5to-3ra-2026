@@ -5,7 +5,7 @@ import java.util.List;
 public class peleador {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY);
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
     private int puntosVida;
@@ -17,12 +17,12 @@ public class peleador {
 
     public peleador() {
     }
-    
-    public Long getId() {
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -35,18 +35,18 @@ public class peleador {
     }
 
     public int getPuntosVida() {
-        return puntosvida;
+        return puntosVida;
     }
 
-    public void getPuntosVida() {
-        this.puntosVida = vida;
+    public void setPuntosVida(int puntosVida) {
+        this.puntosVida = puntosVida;
     }
 
     public int getEnergia() {
         return energia;
     }
 
-    public void getEnergia() {
+    public void setEnergia(int energia) {
         this.energia = energia;
     }
 
@@ -54,32 +54,36 @@ public class peleador {
         return defensaBase;
     }
 
-    public void getDefensaBase() {
-        this.defensabase = defensabase;
+    public void setDefensaBase(float defensaBase) {
+        this.defensaBase = defensaBase;
     }
 
     public Arma getArmaEquipada() {
         return armaEquipada;
     }
 
-    public void getArmaEquipada() {
-        this.armaequipada = armaequipada;
+    public void setArmaEquipada(Arma armaEquipada) {
+        this.armaEquipada = armaEquipada;
     }
 
     public List getInventario() {
-        return getinventario;
+        return inventario;
     }
-     
-    public void getInventario() {
+
+    public void setInventario(List inventario) {
         this.inventario = inventario;
     }
 
     public List getHabilidades() {
-        return gethabilidades;
+        return habilidades;
     }
 
-    public void getHabilidades() {
+    public void setHabilidades(List habilidades) {
         this.habilidades = habilidades;
     }
+    
+   
+
+    
    }   
 		
