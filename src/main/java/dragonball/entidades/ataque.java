@@ -5,9 +5,9 @@ public class ataque {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
  private int id;
- private int costeEnergia;
+ private int costoEnergia;
  private int danioBase;
- private string nombre;
+ private String nombre;
 
     public ataque() {
 	}
