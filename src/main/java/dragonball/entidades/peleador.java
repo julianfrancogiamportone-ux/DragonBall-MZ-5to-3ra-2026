@@ -2,7 +2,7 @@ package dragonball.entidades;
 import jakarta.persistence.*;
 import java.util.List;
 @Entity 
-public class peleador {
+public class Peleador {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +15,10 @@ public class peleador {
     private List inventario;
     private List habilidades;
 
-    public peleador() {
+    @ManyToMany 
+    private List<Peleador> integrantesColaboradores;
+
+    public Peleador() {
     }
 
     public int getId() {
