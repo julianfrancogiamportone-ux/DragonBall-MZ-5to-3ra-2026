@@ -11,7 +11,7 @@ public class Peleador {
     private int puntosVida;
     private int energia;
     private float defensaBase;
-    private Arma armaEquipada;
+    private arma armaEquipada;
     private List inventario;
     private List habilidades;
 
@@ -61,11 +61,11 @@ public class Peleador {
         this.defensaBase = defensaBase;
     }
 
-    public Arma getArmaEquipada() {
+    public arma getArmaEquipada() {
         return armaEquipada;
     }
 
-    public void setArmaEquipada(Arma armaEquipada) {
+    public void setArmaEquipada(arma armaEquipada) {
         this.armaEquipada = armaEquipada;
     }
 
@@ -83,10 +83,5 @@ public class Peleador {
 
     public void setHabilidades(List habilidades) {
         this.habilidades = habilidades;
-    }
-    
-   
-
-    
+    }    
    }   
-		

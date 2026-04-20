@@ -2,7 +2,7 @@ package dragonball.entidades;
 import jakarta.persistence.*;
 
 @Entity
-public class Arma {
+public class arma {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -13,7 +13,7 @@ public class Arma {
 	@ManyToMany(mappedBy = "integrantesColaboradores")
 	private List<Peleador> peleadores;
     
-	public Arma() {
+	public arma() {
 	}
 	public int getId() {
 		return id;
