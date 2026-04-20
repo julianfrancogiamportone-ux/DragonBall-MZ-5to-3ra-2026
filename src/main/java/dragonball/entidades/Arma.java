@@ -1,5 +1,6 @@
 package dragonball.entidades;
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 public class Arma {
