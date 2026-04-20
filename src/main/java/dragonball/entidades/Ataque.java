@@ -1,7 +1,7 @@
 package dragonball.entidades;
 import jakarta.persistence.*;
 @Entity
-public class ataque {
+public class Ataque {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
  private int id;
@@ -9,7 +9,7 @@ public class ataque {
  private int danioBase;
  private String nombre;
 
-    public ataque() {
+    public Ataque() {
 	}
 	
 	public int getid() {
