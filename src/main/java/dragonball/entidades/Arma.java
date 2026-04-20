@@ -11,7 +11,7 @@ public class Arma {
     private int bonificadorDanio;
 	private float peso;
 
-	@ManyToMany(mappedBy = "estudiantesColaboradores")
+	@ManyToMany(mappedBy = "integrantesColaboradores")
 	private List<Peleador> peleadores;
     
 	public Arma() {
@@ -41,4 +41,3 @@ public class Arma {
 		this.peso = peso;
 	}
 }
-
