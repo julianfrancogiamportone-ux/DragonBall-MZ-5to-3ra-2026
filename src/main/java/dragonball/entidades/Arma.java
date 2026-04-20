@@ -1,5 +1,6 @@
 package dragonball.entidades;
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 public class Arma {
@@ -10,8 +11,8 @@ public class Arma {
     private int bonificadorDanio;
 	private float peso;
 
-	@ManyToMany(mappedBy = "estudiantesColaboradores")
-	private ArrayList<Peleador> peleadores;
+	@ManyToMany(mappedBy = "integrantesColaboradores")
+	private List<Peleador> peleadores;
     
 	public Arma() {
 	}
@@ -40,4 +41,3 @@ public class Arma {
 		this.peso = peso;
 	}
 }
-

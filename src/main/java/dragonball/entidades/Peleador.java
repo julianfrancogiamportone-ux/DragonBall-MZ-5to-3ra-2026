@@ -11,9 +11,6 @@ public class Peleador {
     private int puntosVida;
     private int energia;
     private float defensaBase;
-    private Arma armaEquipada;
-    private List inventario;
-    private List habilidades;
 
     @ManyToMany 
     private List<Peleador> integrantesColaboradores;
@@ -61,32 +58,4 @@ public class Peleador {
         this.defensaBase = defensaBase;
     }
 
-    public Arma getArmaEquipada() {
-        return armaEquipada;
-    }
-
-    public void setArmaEquipada(Arma armaEquipada) {
-        this.armaEquipada = armaEquipada;
-    }
-
-    public List getInventario() {
-        return inventario;
-    }
-
-    public void setInventario(List inventario) {
-        this.inventario = inventario;
-    }
-
-    public List getHabilidades() {
-        return habilidades;
-    }
-
-    public void setHabilidades(List habilidades) {
-        this.habilidades = habilidades;
-    }
-    
-   
-
-    
-   }   
-		
+}
