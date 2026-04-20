@@ -15,6 +15,7 @@ public class peleador {
     private List inventario;
     private List habilidades;
 
+    
     public peleador() {
     }
 

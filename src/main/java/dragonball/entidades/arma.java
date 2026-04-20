@@ -1,8 +1,9 @@
 package dragonball.entidades;
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
-public class Arma {
+public class arma {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -10,10 +11,10 @@ public class Arma {
     private int bonificadorDanio;
 	private float peso;
 
-	@ManyToMany(mappedBy = "estudiantesColaboradores")
+	@ManyToMany(mappedBy = "integrantesColaboradores")
 	private List<Peleador> peleadores;
-    
-	public Arma() {
+
+	public arma() {
 	}
 	public int getId() {
 		return id;
