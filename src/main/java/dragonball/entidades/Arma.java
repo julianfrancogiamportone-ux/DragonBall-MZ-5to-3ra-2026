@@ -12,7 +12,7 @@ public class Arma {
 	private float peso;
 
 	@ManyToMany(mappedBy = "estudiantesColaboradores")
-	private ArrayList<Peleador> peleadores;
+	private List<Peleador> peleadores;
     
 	public Arma() {
 	}
