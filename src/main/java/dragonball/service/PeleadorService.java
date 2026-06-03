@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import dragonball.entidades.Peleador;
+import dragonball.repository.PeleadorRepository;
 import dragonball.IService.IPeleadorService;
-import dragonball.Repository.PeleadorRepository;
 
 @Service
 

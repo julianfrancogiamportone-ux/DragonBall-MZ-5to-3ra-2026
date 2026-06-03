@@ -1,4 +1,4 @@
-package dragonball.Repository;
+package dragonball.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import dragonball.entidades.Peleador;
 
