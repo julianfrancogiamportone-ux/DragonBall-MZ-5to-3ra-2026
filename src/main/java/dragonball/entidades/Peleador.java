@@ -8,7 +8,7 @@ public class Peleador {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String nombre;
     private int puntosVida;
     private int energia;
