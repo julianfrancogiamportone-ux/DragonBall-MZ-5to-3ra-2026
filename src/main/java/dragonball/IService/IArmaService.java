@@ -1,4 +1,4 @@
-package dragonball.controller;
+package dragonball.IService;
 import java.util.List;
 import dragonball.model.Arma;
 
