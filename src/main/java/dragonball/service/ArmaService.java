@@ -1,4 +1,4 @@
-package dragonball.controller;
+package dragonball.service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -6,7 +6,7 @@ import dragonball.IService.IArmaService;
 import dragonball.model.Arma;
 
 @Service
-public class  ArmaService implements IArmaService {
+public class ArmaService implements IArmaService {
     @Autowired
     private ArmaRepository aRepository;
     public List<Arma> findAllArmas() {

@@ -1,4 +1,4 @@
-package dragonball.controller;
+package dragonball.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ArmaRepository extends JpaRepository<Arma, Long> {
