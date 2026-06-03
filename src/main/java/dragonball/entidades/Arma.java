@@ -15,9 +15,6 @@ public class Arma {
 
 	@ManyToMany(mappedBy = "listaArmas")
 	private List<Peleador> peleadores;
-    
-	public Arma() {
-	}
 	
 	public Arma(String nombre, int bonificadorDanio) {
 		this.nombre = nombre;
