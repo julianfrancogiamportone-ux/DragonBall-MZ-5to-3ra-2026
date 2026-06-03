@@ -1,9 +1,11 @@
 package dragonball.entidades;
+
 import jakarta.persistence.*;
 import java.util.List;
-@Entity 
+
+@Entity
 public class Peleador {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -12,10 +14,21 @@ public class Peleador {
     private int energia;
     private float defensaBase;
 
-    @ManyToMany 
-    private List<Peleador> integrantesColaboradores;
+    @ManyToMany
+    @JoinTable(name = "peleador_arma", joinColumns = @JoinColumn(name = "peleador_id"), inverseJoinColumns = @JoinColumn(name = "arma_id"))
+    private List<Arma> listaArmas;
+
+    @ManyToMany
+    @JoinTable(name = "peleador_ataque", joinColumns = @JoinColumn(name = "peleador_id"), inverseJoinColumns = @JoinColumn(name = "ataque_id"))
+
+    private List<Ataque> listaAtaques;
 
     public Peleador() {
+    }
+
+    public Peleador(String nombre, int puntosVida) {
+        this.nombre = nombre;
+        this.puntosVida = puntosVida;
     }
 
     public int getId() {
@@ -56,6 +69,21 @@ public class Peleador {
 
     public void setDefensaBase(float defensaBase) {
         this.defensaBase = defensaBase;
+    }
+
+    public List<Arma> getListaArmas() {
+        return listaArmas;
+    }
+
+    public void setListaArmas(List<Arma> listaArmas) {
+        this.listaArmas = listaArmas;
+    }
+    public List<Ataque> getListaAtaques() {
+        return listaAtaques;
+    }
+
+    public void setListaAtaques(List<Ataque> listaAtaques) {
+        this.listaAtaques = listaAtaques;
     }
 
 }

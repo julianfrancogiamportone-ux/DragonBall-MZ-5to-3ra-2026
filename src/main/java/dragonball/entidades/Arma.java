@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "armas")
 public class Arma {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +17,12 @@ public class Arma {
     
 	public Arma() {
 	}
+	
+	public Arma(String nombre, int bonificadorDanio) {
+		this.nombre = nombre;
+		this.bonificadorDanio = bonificadorDanio;
+	}
+
 	public int getId() {
 		return id;
 	}

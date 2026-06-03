@@ -1,28 +1,38 @@
 package dragonball.entidades;
 import jakarta.persistence.*;
-@Entity
-public class Ataque {
- @Id
- @GeneratedValue(strategy = GenerationType.IDENTITY)
- private int id;
- private int costoEnergia;
- private int danioBase;
- private String nombre;
+import java.util.List;
 
-    public Ataque() {
+@Entity
+@Table(name = "ataques")
+
+public class Ataque {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private int costoEnergia;
+	private int danioBase;
+	private String nombre;
+	@ManyToMany(mappedBy = "integrantesColaboradores")
+	private List<Peleador> peleadores;
+	public Ataque() {
 	}
 	
-	public int getid() {
+	public Ataque(String nombre, int danioBase) {
+		this.danioBase = danioBase;
+		this.nombre = nombre;
+	}
+
+	public int getId() {
 		return id;
 	}
-	public void setid(int id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public String getnombre() {
+	public String getNombre() {
 		return nombre;
 	}
-	public void setnombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	
