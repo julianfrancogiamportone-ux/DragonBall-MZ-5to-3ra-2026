@@ -11,7 +11,7 @@ public class Arma {
     private int bonificadorDanio;
 	private float peso;
 
-	@ManyToMany(mappedBy = "integrantesColaboradores")
+	@ManyToMany(mappedBy = "listaArmas")
 	private List<Peleador> peleadores;
     
 	public Arma() {

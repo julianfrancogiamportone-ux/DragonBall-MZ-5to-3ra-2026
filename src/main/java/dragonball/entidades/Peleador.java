@@ -12,8 +12,14 @@ public class Peleador {
     private int energia;
     private float defensaBase;
 
-    @ManyToMany 
-    private List<Peleador> integrantesColaboradores;
+    @ManyToMany
+    @JoinTable(name = "peleador_arma", joinColumns = @JoinColumn(name = "peleador_id"),
+    inverseJoinColumns = @JoinColumn(name = "arma_id"))
+    private List<Arma> listaArmas;
+    @ManyToMany
+    @JoinTable(name = "peleador_ataque", joinColumns = @JoinColumn(name = "peleador_id"),
+    inverseJoinColumns = @JoinColumn(name = "ataque_id"))
+    private List<Ataque> listaAtaques;
 
     public Peleador() {
     }

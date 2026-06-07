@@ -1,4 +1,6 @@
 package dragonball.entidades;
+import java.util.List;
+
 import jakarta.persistence.*;
 @Entity
 public class Ataque {
@@ -9,6 +11,9 @@ public class Ataque {
  private int danioBase;
  private String nombre;
 
+@ManyToMany(mappedBy = "listaAtaques")
+	private List<Peleador> peleadores;
+	
     public Ataque() {
 	}
 	
