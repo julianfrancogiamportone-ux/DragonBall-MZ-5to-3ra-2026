@@ -20,6 +20,11 @@ public class Arma {
 		this.nombre = nombre;
 		this.bonificadorDanio = bonificadorDanio;
 	}
+	
+	public Arma(String nombre, int bonificadorDanio) {
+		this.nombre = nombre;
+		this.bonificadorDanio = bonificadorDanio;
+	}
 
 	public int getId() {
 		return id;

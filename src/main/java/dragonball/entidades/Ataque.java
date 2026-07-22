@@ -12,7 +12,7 @@ public class Ataque {
 	private int costoEnergia;
 	private int danioBase;
 	private String nombre;
-	@ManyToMany(mappedBy = "listaAtaques")
+	@ManyToMany(mappedBy = "integrantesColaboradores")
 	private List<Peleador> peleadores;
 	public Ataque() {
 	}
