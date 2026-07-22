@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pelea Épica: Naruto vs Dragon Ball</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <img class="arena-backdrop" src="images/fondo.png" alt="">
+  <div class="arena-shade"></div>
+  <div class="energy-orb"></div>
+
+  <main class="main-content">
+
+    <header class="game-header">
+      <img id="dbLogo" src="images/logo.png" alt="Logo Dragon Ball">
+      <h1 class="game-title">¡Batalla de Universos!</h1>
+      <p class="game-subtitle">Elegí un personaje para cada jugador y descubrí quién gana la pelea.</p>
+    </header>
+
+    <div class="battle-layout">
+
+      <section class="fighter-panel player-one" id="panel1">
+        <div class="player-heading">
+          <h2 class="player-label">Jugador 1</h2>
+          <span class="selected-indicator" id="fighter1Selected">Elegí un personaje</span>
+        </div>
+
+        <div class="fighter-body">
+          <div class="portrait-stage">
+            <img id="fighter1Image" class="fighter-image" src="" alt="Personaje 1">
+            <div class="fighter-info">
+              <h3 class="fighter-name" id="fighter1Name"></h3>
+              <div class="power-row">
+                <div class="power-track"><span class="power-fill" id="fighter1PowerFill"></span></div>
+                <span class="power-value" id="fighter1PowerValue">--</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="option-row" id="fighter1Options"></div>
+        </div>
+      </section>
+
+      <div class="versus-wrap">
+        <span class="versus-text">VS</span>
+      </div>
+
+      <section class="fighter-panel player-two" id="panel2">
+        <div class="player-heading">
+          <h2 class="player-label">Jugador 2</h2>
+          <span class="selected-indicator" id="fighter2Selected">Elegí un personaje</span>
+        </div>
+
+        <div class="fighter-body">
+          <div class="portrait-stage">
+            <img id="fighter2Image" class="fighter-image" src="" alt="Personaje 2">
+            <div class="fighter-info">
+              <h3 class="fighter-name" id="fighter2Name"></h3>
+              <div class="power-row">
+                <div class="power-track"><span class="power-fill" id="fighter2PowerFill"></span></div>
+                <span class="power-value" id="fighter2PowerValue">--</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="option-row" id="fighter2Options"></div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="fight-zone">
+      <button class="fight-button" id="fightButton"><span>¡Pelear!</span></button>
+    </div>
+
+  </main>
+</div>
+
+<script src="/js/battle2.js"></script>
+</body>
+</html>
