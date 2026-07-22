@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import dragonball.IService.IArmaService;
-import dragonball.model.Arma;
+import dragonball.entidades.Arma;
 
 @RestController
 @RequestMapping("/api") 

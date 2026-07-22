@@ -1,4 +1,4 @@
-package dragonball.Service;
+package dragonball.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,7 +3,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import dragonball.IService.IArmaService;
-import dragonball.model.Arma;
+import dragonball.entidades.Arma;
 
 @Service
 public class ArmaService implements IArmaService {
