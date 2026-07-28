@@ -1,5 +1,4 @@
 package dragonball.entidades;
-
 import jakarta.persistence.*;
 import java.util.List;
 

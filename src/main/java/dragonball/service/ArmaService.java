@@ -4,11 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import dragonball.IService.IArmaService;
 import dragonball.entidades.Arma;
+import dragonball.repository.ArmaRepository;
 
 @Service
 public class ArmaService implements IArmaService {
     @Autowired
     private ArmaRepository aRepository;
+
     public List<Arma> findAllArmas() {
         return aRepository.findAll();
     }
@@ -27,7 +29,4 @@ public class ArmaService implements IArmaService {
     }
 }
 
-interface ArmaRepository {
-    List<Arma> findAll();
-    Arma save(Arma arma);
-}
+

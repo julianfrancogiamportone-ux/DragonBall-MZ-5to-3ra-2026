@@ -12,7 +12,7 @@ import dragonball.entidades.Ataque;
 import dragonball.repository.AtaqueRepository;
 
 
-
+@Service
 public class AtaqueService implements IAtaqueService {
 
 	@Autowired

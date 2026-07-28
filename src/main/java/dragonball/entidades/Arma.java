@@ -1,7 +1,6 @@
 package dragonball.entidades;
 import jakarta.persistence.*;
 import java.util.List;
-import dragonball.entidades.Peleador;
 
 @Entity
 @Table(name = "armas")
@@ -15,7 +14,12 @@ public class Arma {
 
 	@ManyToMany(mappedBy = "listaArmas")
 	private List<Peleador> peleadores;
+
 	
+	
+	public Arma() {
+	}
+
 	public Arma(String nombre, int bonificadorDanio) {
 		this.nombre = nombre;
 		this.bonificadorDanio = bonificadorDanio;

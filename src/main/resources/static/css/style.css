@@ -33,8 +33,8 @@ textarea {
 
 @font-face {
   font-family: 'DragonKids';
-  src: url("fonts/dragon_kids/DRAGON KIDS.ttf") format("truetype"),
-       url("fonts/dragon_kids/DRAGON KIDS.otf") format("opentype");
+  src: url("static/fonts/dragon_kids/DRAGON KIDS.ttf") format("truetype"),
+       url("static/fonts/dragon_kids/DRAGON KIDS.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -42,8 +42,8 @@ textarea {
 
 @font-face {
   font-family: 'DragonKidsBroke';
-  src: url("fonts/dragon_kids/DRAGON KIDS BROKE.ttf") format("truetype"),
-       url("fonts/dragon_kids/DRAGON KIDS BROKE.otf") format("opentype");
+  src: url("static/fonts/dragon_kids/DRAGON KIDS BROKE.ttf") format("truetype"),
+       url("static/fonts/dragon_kids/DRAGON KIDS BROKE.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

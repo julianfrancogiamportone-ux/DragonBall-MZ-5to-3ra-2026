@@ -17,7 +17,7 @@ import dragonball.entidades.Ataque;
 
 
 @RestController
-@RequestMapping("/api/characters")
+@RequestMapping("/api/ataques")
 
 public class AtaqueController {
 

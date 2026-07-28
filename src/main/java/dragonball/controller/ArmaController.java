@@ -10,7 +10,7 @@ import dragonball.IService.IArmaService;
 import dragonball.entidades.Arma;
 
 @RestController
-@RequestMapping("/api") 
+@RequestMapping("/api/armas") 
 public class ArmaController {
     @Autowired
     private IArmaService armaService;
