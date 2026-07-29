@@ -12,6 +12,7 @@ public class Peleador {
     private int puntosVida;
     private int energia;
     private float defensaBase;
+    private String imagenUrl;
 
     @ManyToMany
     @JoinTable(name = "peleador_arma", joinColumns = @JoinColumn(name = "peleador_id"), inverseJoinColumns = @JoinColumn(name = "arma_id"))
@@ -83,6 +84,14 @@ public class Peleador {
 
     public void setListaAtaques(List<Ataque> listaAtaques) {
         this.listaAtaques = listaAtaques;
+    }
+
+    public String getImagenUrl() {
+        return imagenUrl;
+    }
+ 
+    public void setImagenUrl(String imagenUrl) {
+        this.imagenUrl = imagenUrl;
     }
 
 }
