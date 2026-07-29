@@ -17,16 +17,4 @@ public class ArmaService implements IArmaService {
     public Arma saveArma(Arma arma) {
         return aRepository.save(arma);
     }
-
-    @Override
-    public List<Arma> getAllArmas() {
-        return aRepository.findAll();
-    }
-
-    @Override
-    public Arma createArma(Arma arma) {
-        return aRepository.save(arma);
-    }
 }
-
-
