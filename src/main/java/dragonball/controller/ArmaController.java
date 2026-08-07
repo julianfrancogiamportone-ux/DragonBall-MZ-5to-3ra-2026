@@ -17,11 +17,11 @@ public class ArmaController {
 
     @GetMapping("/armas")
     public List<Arma> getAllArmas() {
-        return armaService.getAllArmas();
+        return armaService.findAllArmas();
     }
 
     @PostMapping("/armas")
     public Arma createArma(@RequestBody Arma arma) {
-        return armaService.createArma(arma);
+        return armaService.saveArma(arma);
     }
 }

@@ -33,8 +33,7 @@ textarea {
 
 @font-face {
   font-family: 'DragonKids';
-  src: url("static/fonts/dragon_kids/DRAGON KIDS.ttf") format("truetype"),
-       url("static/fonts/dragon_kids/DRAGON KIDS.otf") format("opentype");
+  src: url("../fonts/dragon_kids/DRAGON KIDS.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -42,8 +41,7 @@ textarea {
 
 @font-face {
   font-family: 'DragonKidsBroke';
-  src: url("static/fonts/dragon_kids/DRAGON KIDS BROKE.ttf") format("truetype"),
-       url("static/fonts/dragon_kids/DRAGON KIDS BROKE.otf") format("opentype");
+  src: url("../fonts/dragon_kids/DRAGON KIDS BROKE.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -212,6 +210,54 @@ textarea {
   text-transform: uppercase;
 }
 
+.option-picker {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.option-arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.8rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 239, 154, .55);
+  background: linear-gradient(180deg, #ff8a00, #ff4500);
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 150ms ease, filter 150ms ease;
+}
+
+.option-arrow:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.option-arrow:active {
+  transform: translateY(1px);
+}
+
+.option-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  filter: grayscale(0.4);
+  transform: none;
+}
+
+.page-indicator {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,.6);
+}
+
 .option-row {
   flex: 1;
   min-width: 0;
@@ -219,24 +265,18 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  overflow-y: auto;
+  overflow: hidden;
   padding-right: 0.35rem;
-}
-
-.option-row::-webkit-scrollbar {
-  width: 6px;
-}
-
-.option-row::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,.25);
-  border-radius: 999px;
 }
 
 .character-option {
   position: relative;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   min-height: 2.5rem;
-  padding: 0.6rem 0.75rem;
+  padding: 0.4rem 0.75rem;
   border: 1px solid rgba(255,255,255,.17);
   border-radius: 0.8rem;
   color: white;
@@ -249,6 +289,18 @@ textarea {
   text-overflow: ellipsis;
   cursor: pointer;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.character-option-thumb {
+  width: 2.1rem;
+  height: 2.1rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center top;
+  background: rgba(0,0,0,.4);
+  position: relative;
+  z-index: 1;
 }
 
 .character-option::before {
@@ -395,6 +447,36 @@ textarea {
   text-align: right;
 }
 
+.fighter-select {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(2, 7, 20, 0.72);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.fighter-select option {
+  background: var(--ink);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-text {
+  margin: 1rem 0 0;
+  font-family: "Russo One", "Raleway", sans-serif;
+  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  text-align: center;
+  text-shadow: 0 3px 8px rgba(0,0,0,.85);
+}
+
 .versus-wrap {
   display: grid;
   place-items: center;
@@ -435,6 +517,10 @@ textarea {
   border-radius: 1rem;
   cursor: pointer;
   text-transform: uppercase;
+  font-family: "Russo One", "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
   transform: skewX(-6deg);
   box-shadow: 0 0 0 4px rgba(111, 23, 0, .5), 0 12px 30px rgba(255, 69, 0, .36);
   transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease;

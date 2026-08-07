@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pelea Épica: Naruto vs Dragon Ball</title>
+<title>Pelea Épica: Dragon Ball</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -41,7 +41,12 @@
             </div>
           </div>
 
-          <div class="option-row" id="fighter1Options"></div>
+          <div class="option-picker">
+            <button type="button" class="option-arrow" id="fighter1ScrollUp" aria-label="Ver personajes anteriores">▲</button>
+            <div class="option-row" id="fighter1Options"></div>
+            <span class="page-indicator" id="fighter1PageIndicator"></span>
+            <button type="button" class="option-arrow" id="fighter1ScrollDown" aria-label="Ver más personajes">▼</button>
+          </div>
         </div>
       </section>
 
@@ -67,7 +72,12 @@
             </div>
           </div>
 
-          <div class="option-row" id="fighter2Options"></div>
+          <div class="option-picker">
+            <button type="button" class="option-arrow" id="fighter2ScrollUp" aria-label="Ver personajes anteriores">▲</button>
+            <div class="option-row" id="fighter2Options"></div>
+            <span class="page-indicator" id="fighter2PageIndicator"></span>
+            <button type="button" class="option-arrow" id="fighter2ScrollDown" aria-label="Ver más personajes">▼</button>
+          </div>
         </div>
       </section>
 
@@ -75,11 +85,12 @@
 
     <div class="fight-zone">
       <button class="fight-button" id="fightButton"><span>¡Pelear!</span></button>
+      <p id="result" class="result-text hidden"></p>
     </div>
 
   </main>
 </div>
 
-<script src="/js/battle2.js"></script>
+<script src="/js/scrip.js"></script>
 </body>
 </html>
